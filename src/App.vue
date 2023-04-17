@@ -27,12 +27,4 @@ export default {
 </template>
 
 
-<style lang="scss" scoped>
-main {
-  background-color: orange;
-
-  .form-select {
-    width: 200px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
