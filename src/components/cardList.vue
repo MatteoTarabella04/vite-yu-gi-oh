@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
-import foundBanner from './FoundBanner.vue';
-import cardItem from './CardItem.vue';
+import foundBanner from './foundBanner.vue';
+import cardItem from './cardItem.vue';
 export default {
    name: 'cardList',
 
