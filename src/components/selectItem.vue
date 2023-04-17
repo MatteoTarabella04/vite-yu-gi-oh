@@ -1,6 +1,6 @@
 <script>
 export default {
-   name: 'selecItem',
+   name: 'SelecItem',
 
 }
 </script>

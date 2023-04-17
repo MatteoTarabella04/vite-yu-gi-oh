@@ -2,12 +2,12 @@
 import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import loadingItem from './components/loadingItem.vue';
+import LoadingItem from './components/loadingItem.vue'
 export default {
   components: {
     AppHeader,
     AppMain,
-    loadingItem,
+    LoadingItem,
   },
 
   data() {
@@ -17,7 +17,7 @@ export default {
   },
 
   mounted() {
-    this.callApiCardsPath(store.API_URL)
+    this.store.callApiCardsPath(this.store.API_URL)
   }
 
 }

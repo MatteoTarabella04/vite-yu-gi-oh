@@ -1,13 +1,13 @@
 <script>
 import { store } from '../store';
-import selectItem from './selectItem.vue';
-import cardList from './cardList.vue';
+import SelectItem from './selectItem.vue';
+import CardList from './cardList.vue';
 export default {
-   name: 'appMain',
+   name: 'AppMain',
 
    components: {
-      selectItem,
-      cardList,
+      SelectItem,
+      CardList,
    },
 
    data() {

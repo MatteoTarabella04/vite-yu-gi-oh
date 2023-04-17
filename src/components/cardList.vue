@@ -3,7 +3,7 @@ import { store } from '../store';
 import foundBanner from './foundBanner.vue';
 import cardItem from './cardItem.vue';
 export default {
-   name: 'cardList',
+   name: 'CardList',
 
    components: {
       foundBanner,
