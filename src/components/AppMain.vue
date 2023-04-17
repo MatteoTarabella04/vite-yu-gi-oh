@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
-import selectItem from './selectItem.vue';
-import cardList from './cardList.vue';
+import selectItem from './SelectItem.vue';
+import cardList from './CardList.vue';
 export default {
    name: 'appMain',
 

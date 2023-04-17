@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
-import foundBanner from './foundBanner.vue';
-import cardItem from './cardItem.vue';
+import foundBanner from './FoundBanner.vue';
+import cardItem from './CardItem.vue';
 export default {
    name: 'cardList',
 
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <template>
-   <div class="container bg-light h-100 p-4">
+   <div class="container bg-light p-4">
       <foundBanner />
       <div class="row row-cols-5">
          <cardItem v-for="card in store.cards" :card="card" />
