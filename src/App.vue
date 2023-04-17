@@ -1,27 +1,29 @@
 <script>
+import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 export default {
   components: {
     AppHeader,
+    AppMain,
+  },
+
+  data() {
+    return {
+      store,
+    }
+  },
+
+  mounted() {
+    store.callApiCardsPath(store.API_URL)
   }
+
 }
 </script>
 
 <template>
   <AppHeader />
-  <main>
-    <div class="container px-2 py-4">
-      <select class="form-select" aria-label="default">
-        <option selected>Filtra</option>
-        <option value="1">Alien</option>
-        <option value="2">???</option>
-        <option value="3">???</option>
-      </select>
-    </div>
-    <div class="container bg-light h-100">
-
-    </div>
-  </main>
+  <AppMain />
 </template>
 
 
