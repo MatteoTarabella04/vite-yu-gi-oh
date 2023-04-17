@@ -13,6 +13,7 @@ export const store = reactive({
             console.log(response);
             this.cards = response.data.data;
             console.log(this.cards);
+            this.loading = false;
          })
          .catch(err => {
             console.log(err);
