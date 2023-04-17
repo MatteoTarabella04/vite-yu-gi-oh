@@ -2,10 +2,12 @@
 import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import loadingItem from './components/loadingItem.vue';
 export default {
   components: {
     AppHeader,
     AppMain,
+    loadingItem,
   },
 
   data() {
@@ -15,7 +17,7 @@ export default {
   },
 
   mounted() {
-    store.callApiCardsPath(store.API_URL)
+    this.callApiCardsPath(store.API_URL)
   }
 
 }
@@ -23,7 +25,8 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain v-if="!store.loading" />
+  <loadingItem v-else />
 </template>
 
 
