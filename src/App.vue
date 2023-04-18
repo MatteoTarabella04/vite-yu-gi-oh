@@ -17,7 +17,9 @@ export default {
   },
 
   mounted() {
-    this.store.callApiCardsPath(this.store.API_URL)
+    if (this.store.filter === '') {
+      this.store.callApiCardsPath(store.API_URL + `?num=30&offset=0`)
+    }
   }
 
 }
