@@ -8,17 +8,14 @@ export default {
          store,
       }
    },
-
-   props: {
-      archArray: Array,
-   }
 }
 </script>
 <template>
    <div class="container px-2 py-4">
-      <select class="form-select" aria-label="default">
-         <option selected>Filter</option>
-         <option v-for="arch in archArray" :value="arch.archetype_name">{{ arch.archetype_name }}</option>
+      <select class="form-select" aria-label="default" v-model="this.store.filter" @change="$emit('changeArch')">
+         <option value="" selected>Filter</option>
+         <option v-for="archetype in store.archArray" :value="archetype.archetype_name">{{ archetype.archetype_name }}
+         </option>
 
       </select>
    </div>
