@@ -1,5 +1,7 @@
 main {
    background-color: orange;
+   height: calc(100vh - 100px);
+   overflow-y: auto;
 
    img {
       min-height: 350px;
