@@ -14,32 +14,25 @@ export default {
    data() {
       return {
          store,
-         archURL: 'https://db.ygoprodeck.com/api/v7/archetypes.php',
-         archArray: [],
       }
    },
    methods: {
-      filterArchetypes(url) {
-         axios
-            .get(url)
-            .then(response => {
-               this.archArray = response.data;
-            })
-            .catch(err => {
-               console.log(err);
-               console.error(err.message);
-            })
-      }
+
+      selectedFilter() {
+         const url = this.store.API_URL + `?archetype=${this.store.filter}`;
+         this.store.callApiCardsPath(url);
+      },
+
    },
    mounted() {
-      this.filterArchetypes(this.archURL);
+      this.store.filterArchetypes(this.store.archURL);
    }
 
 }
 </script>
 <template>
    <main>
-      <selectItem :arch-array="archArray" />
+      <selectItem @changeArch="selectedFilter()" :arch-array="this.store.archArray" />
       <cardList />
    </main>
 </template>
