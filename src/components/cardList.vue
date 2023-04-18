@@ -22,9 +22,9 @@ export default {
 }
 </script>
 <template>
-   <div class="container bg-light p-4">
+   <div class="container bg-light p-2">
       <foundBanner />
-      <div class="row row-cols-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-5">
          <cardItem v-for="card in store.cards" :card="card" />
       </div>
    </div>

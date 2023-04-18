@@ -13,7 +13,7 @@ export default {
 <template>
    <div class="col mb-3">
       <div class="card rounded-0">
-         <img :src="card.card_images[0].image_url" :alt="card.name" height="300">
+         <img :src="card.card_images[0].image_url" :alt="card.name" class="img-fluid">
          <div class="info p-2 text-light text-center">
             <h5 class="m-0">{{ card.name }}</h5>
             <div class="archetype">
