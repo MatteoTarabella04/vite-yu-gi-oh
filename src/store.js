@@ -6,7 +6,7 @@ export const store = reactive({
    loading: true,
    cards: [],
    archArray: [],
-   filter: '',
+   filter: '-- Select Archetype --',
 
 
    callApiCardsPath(url) {

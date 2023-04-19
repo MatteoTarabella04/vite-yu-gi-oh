@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import SelectItem from './selectItem.vue'
+import SelectItem from './SelectItem.vue'
 import CardList from './cardList.vue';
 export default {
    name: 'AppMain',

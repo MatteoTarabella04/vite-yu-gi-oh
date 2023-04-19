@@ -17,7 +17,7 @@ export default {
   },
 
   mounted() {
-    if (this.store.filter === '') {
+    if (this.store.filter === '-- Select Archetype --') {
       this.store.callApiCardsPath(store.API_URL + `?num=30&offset=0`)
     }
   }
